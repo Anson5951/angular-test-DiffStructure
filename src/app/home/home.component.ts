@@ -39,17 +39,15 @@ export class HomeComponent implements OnInit {
   }
 
   edit(product: Product) {
-    this.product = product;
+    this.product = Object.assign({}, product);
     this.showProductDetail = true;
   }
 
   update(product: Product) {
-    let edittedProduct = this.list.find((data: Product) => {
-      data.id === product.id;
-    });
-    if (edittedProduct) {
-      edittedProduct = product;
-    }
+    const editIndex = this.list.findIndex(
+      (data: Product) => data.id === product.id
+    );
+    this.list[editIndex] = product;
     this.showProductDetail = false;
   }
 }

@@ -10,10 +10,13 @@ export class ProductComponent implements OnInit {
 
   @Input() product: Product;
   @Output() updateEvent: EventEmitter<Product> = new EventEmitter();
+  
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 
   update() {
     
