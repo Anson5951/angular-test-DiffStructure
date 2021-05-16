@@ -9,6 +9,7 @@ import { Product } from './product/Product';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
   list: Product[] = [];
   product: Product;
   showProductDetail = false;
